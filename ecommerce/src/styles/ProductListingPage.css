@@ -1,0 +1,123 @@
+/* ============================================================
+   ProductListingPage.css
+   ============================================================ */
+
+/* ── Page header ── */
+.plp__header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.plp__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  flex: 1;
+}
+
+.plp__count {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.plp__filter-toggle {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background: var(--color-surface);
+  transition: all var(--transition-fast);
+}
+
+.plp__filter-toggle:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.plp__filter-badge {
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+/* ── Body layout ── */
+.plp__body {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  gap: var(--spacing-xl);
+  align-items: start;
+}
+
+/* ── Sidebar ── */
+.plp__sidebar {
+  width: var(--sidebar-width);
+}
+
+/* ── Product grid ── */
+.plp__grid-area {
+  min-width: 0;
+}
+
+.plp__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .plp__body {
+    grid-template-columns: 220px 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .plp__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .plp__body {
+    grid-template-columns: 1fr;
+  }
+
+  .plp__sidebar {
+    width: 100%;
+    display: none;
+  }
+
+  .plp__sidebar--open {
+    display: block;
+  }
+
+  .plp__filter-toggle {
+    display: flex;
+  }
+
+  .plp__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .plp__grid {
+    grid-template-columns: 1fr;
+  }
+}

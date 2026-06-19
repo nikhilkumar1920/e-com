@@ -1,0 +1,45 @@
+/* ============================================================
+   NoProducts.css
+   ============================================================ */
+
+.no-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  text-align: center;
+  width: 100%;
+}
+
+.no-products__icon {
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.no-products__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.no-products__subtitle {
+  color: var(--color-text-secondary);
+  max-width: 320px;
+}
+
+.no-products__btn {
+  margin-top: var(--spacing-sm);
+  padding: 10px 24px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  transition: background var(--transition-fast);
+}
+
+.no-products__btn:hover {
+  background: var(--color-primary-dark);
+}

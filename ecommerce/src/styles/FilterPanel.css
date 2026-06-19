@@ -1,0 +1,187 @@
+/* ============================================================
+   FilterPanel.css
+   ============================================================ */
+
+.filter-panel {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  height: fit-content;
+  position: sticky;
+  top: calc(var(--navbar-height) + var(--spacing-lg));
+}
+
+/* Section */
+.filter-panel__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.filter-panel__label {
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filter-panel__sublabel {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+.filter-panel__range-info {
+  font-weight: 400;
+  color: var(--color-primary);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* Search input */
+.filter-panel__search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.filter-panel__search-icon {
+  position: absolute;
+  left: 10px;
+  font-size: 0.85rem;
+  pointer-events: none;
+}
+
+.filter-panel__input {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  transition: border-color var(--transition-fast);
+  background: var(--color-bg);
+}
+
+.filter-panel__input--search {
+  padding-left: 32px;
+}
+
+.filter-panel__input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  background: var(--color-surface);
+}
+
+/* Select */
+.filter-panel__select {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  background: var(--color-bg);
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 14px;
+  padding-right: 32px;
+}
+
+.filter-panel__select:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+/* Size buttons */
+.filter-panel__sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.filter-panel__size-btn {
+  width: 42px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-border);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background: var(--color-bg);
+  transition: all var(--transition-fast);
+}
+
+.filter-panel__size-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.filter-panel__size-btn--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+/* Price inputs */
+.filter-panel__price-inputs {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.filter-panel__price-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.filter-panel__price-sep {
+  color: var(--color-text-muted);
+  margin-top: 18px;
+}
+
+.filter-panel__input--price {
+  padding: 7px 10px;
+}
+
+/* Range slider */
+.filter-panel__range {
+  width: 100%;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.filter-panel__range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+}
+
+/* Reset button */
+.filter-panel__reset-btn {
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-border);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.filter-panel__reset-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: #fff0f3;
+}
