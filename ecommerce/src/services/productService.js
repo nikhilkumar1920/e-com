@@ -2,9 +2,12 @@
 // productService.js — API-ready service layer
 //
 // Currently uses local mock data. To switch to a real API,
-// replace the mock imports with fetch/axios calls and update
-// the functions below. The rest of the app stays unchanged.
+// set REACT_APP_API_URL in your .env file and replace the
+// mock functions below with the fetch calls shown in comments.
+// The rest of the app stays unchanged.
 // ============================================================
+
+const API_URL = process.env.REACT_APP_API_URL;
 
 import products from "../data/products";
 
